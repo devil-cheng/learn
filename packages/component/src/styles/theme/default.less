@@ -1,0 +1,51 @@
+@import '~antd/es/style/color/colors';
+@import '~antd/es/style/themes/default.less';
+
+// base
+@primary-color: #ffa22d;
+@error-color: #f55656;
+@warning-color: #ffa22d;
+@success-color: #44c69d;
+@info-color: #5590f6;
+@text-color: #262626;
+@border-radius-base: 4px;
+@background-color-light: hsv(0, 0, 97%); // background of header and selected item
+@background-color-base: hsv(0, 0, 94%); // Default grey background color
+
+// form
+@form-item-margin-bottom: 24px;
+
+// card
+@card-padding-base: 16px;
+@card-radius: 4px;
+@card-head-padding: 12px;
+
+// modal
+@modal-body-padding: 12px;
+
+// layout
+@layout-header-background: #1e1e1e;
+@layout-header-height: 56px;
+
+// brand
+@brand-primary: @primary-color;
+@brand-primary-tap: @primary-color;
+
+// button
+@btn-disable-color: #d9d9d9;
+
+// tag
+@tag-default-color: fade(@black, 65%);
+
+@btn-danger-bg: color(~`colorPalette('@{error-color}', 6) `);
+@btn-danger-border: color(~`colorPalette('@{error-color}', 6) `);
+
+// Alert
+@alert-success-border-color: ~`colorPalette('@{success-color}', 6) `;
+@alert-success-bg-color: fade(@success-color, 10%);
+@alert-info-border-color: ~`colorPalette('@{info-color}', 6) `;
+@alert-info-bg-color: fade(@info-color, 10%);
+@alert-warning-border-color: ~`colorPalette('@{warning-color}', 6) `;
+@alert-warning-bg-color: fade(@warning-color, 10%);
+@alert-error-border-color: ~`colorPalette('@{error-color}', 6) `;
+@alert-error-bg-color: fade(@error-color, 10%);

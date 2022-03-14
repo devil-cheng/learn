@@ -1,0 +1,27 @@
+@import '~antd/lib/style/index.less';
+@import '~antd/lib/button/style/mixin';
+
+@import '../../styles/theme/default.less';
+
+// 表格基础色
+.@{ant-prefix}-table-thead > tr > td {
+    color: #595959;
+}
+
+// 表头的间隔竖线
+.@{ant-prefix}-table-thead > tr > th {
+    background-color: #fafafa;
+    &:not(:last-child):not(.@{ant-prefix}-table-selection-column):not(.@{ant-prefix}-table-row-expand-icon-cell):not([colspan])::before {
+        width: 0;
+    }
+}
+
+// 单元格底色修改
+.@{ant-prefix}-table-tbody > tr.@{ant-prefix}-table-row:hover > td,
+.@{ant-prefix}-table-tbody > tr > td.@{ant-prefix}-table-cell-row-hover {
+    background-color: #fafafa;
+}
+
+.@{ant-prefix}-table-tbody > tr.@{ant-prefix}-table-row-selected > td {
+    background-color: transparent;
+}

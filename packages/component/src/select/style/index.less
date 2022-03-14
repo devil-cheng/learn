@@ -1,0 +1,57 @@
+@import '~antd/lib/style/index.less';
+@import '~antd/lib/button/style/mixin';
+
+@prefix-select-plus: ~'@{ant-prefix}-select-plus';
+@prefix-select-plus-dropdown: ~'@{ant-prefix}-select-plus-dropdown';
+@prefix-select-menu: ~'@{ant-prefix}-select-dropdown-menu';
+
+.@{prefix-select-plus}-multiple-item-checkbox {
+    margin-right: 8px;
+}
+
+// 重写 select 的样式
+// 多选的标签
+.@{ant-prefix}-select {
+    .@{ant-prefix}-selection--multiple .@{ant-prefix}-search--inline .@{ant-prefix}-search__field {
+        margin-right: -4px;
+    }
+    &-item {
+        padding: 9px 12px;
+        margin: 1px 4px;
+        border-radius: 3px;
+        font-size: 14px;
+        &-option-active,
+        &-option-selected:not(&-option-item-disabled) {
+            background-color: transparent;
+            color: @primary-color;
+            position: relative;
+            font-weight: normal;
+        }
+        //&-option-selected:not(&-option-disabled) &-option-state {
+        //    display: none;
+        //}
+        &:hover:not(&-option-item-disabled),
+        &-option-active:not(&-option-item-disabled) {
+            background-color: @background-color-light;
+        }
+    }
+    &-dropdown {
+        max-height: 304px;
+    }
+    &-selection--multiple {
+        .@{ant-prefix}-select-selection__choice {
+            padding: 0 22px 0 6px;
+            background-color: @background-color-base;
+            border-color: @background-color-base;
+            color: @text-color;
+        }
+    }
+    &-arrow {
+        &-icon {
+            color: hsv(0, 0, 55%);
+        }
+    }
+    &-focused:not(.ant-select-disabled)&:not(&-customize-input) &-selector {
+        box-shadow: 0 0 0 2px rgba(255, 162, 45, 0.15);
+    }
+}

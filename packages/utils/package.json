@@ -1,0 +1,29 @@
+{
+  "name": "@yhc/utils",
+  "version": "0.1.2",
+  "description": "工具库",
+  "main": "./lib/index.ts",
+  "module": "./es/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib",
+    "es",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf es lib dist && father-build"
+  },
+  "keywords": [],
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "lodash-es": "^4.17.21",
+    "pinyin": "^2.10.2",
+    "query-string": "^7.0.1"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/pinyin": "^2.10.0"
+  }
+}

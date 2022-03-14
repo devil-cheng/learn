@@ -1,0 +1,53 @@
+@import '~antd/lib/style/index.less';
+
+@pagination-prefix: ~'@{ant-prefix}-pagination';
+
+.@{pagination-prefix} {
+    display: flex;
+    align-items: center;
+    line-height: @line-height-base;
+
+    .@{ant-prefix}-btn-group {
+        display: flex;
+    }
+
+    &-pageSize {
+        margin: 0 16px 0 8px;
+    }
+
+    &-menu {
+        box-shadow: none;
+        .@{ant-prefix}-dropdown-menu-item-active {
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+    }
+
+    &-pageBtn {
+        font-size: 12px;
+
+        &-prevBtn {
+            font-size: 12px;
+        }
+        &-nextBtn {
+            font-size: 12px;
+        }
+    }
+
+    &-pageWrap {
+        display: flex;
+    }
+
+    &-iconGroup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 8px;
+        color: #333;
+        font-size: 12px;
+        transform: scale(0.8);
+    }
+
+    &-totalPage {
+        margin-left: 8px;
+    }
+}

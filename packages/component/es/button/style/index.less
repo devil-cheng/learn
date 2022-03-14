@@ -1,0 +1,129 @@
+@import '~antd/lib/style/index.less';
+@import '~antd/lib/button/style/mixin';
+
+@import '../../styles/theme/default.less';
+
+// 重置
+.@{ant-prefix}-btn {
+    font-size: 14px;
+    &:not(.@{ant-prefix}-btn-lg):not(.@{ant-prefix}-btn-sm):not(.@{ant-prefix}-btn-circle):not(.@{ant-prefix}-btn-icon-only):not(.@{ant-prefix}-btn-pro) {
+        padding: 0 16px;
+    }
+}
+
+.@{ant-prefix}-btn-lg {
+    font-size: 16px;
+    &:not(.@{ant-prefix}-btn-icon-only):not(.@{ant-prefix}-btn-pro):not(.@{ant-prefix}-btn-circle) {
+        padding: 0 32px;
+    }
+}
+.@{ant-prefix}-btn-sm {
+    font-size: 12px;
+    &:not(.@{ant-prefix}-btn-icon-only):not(.@{ant-prefix}-btn-pro):not(.@{ant-prefix}-btn-circle) {
+        padding: 0 14px;
+    }
+}
+
+// 单纯的图标按钮
+.@{ant-prefix}-btn-icon-only {
+    min-width: initial;
+    padding: 0;
+    &.@{ant-prefix}-btn-round {
+        min-width: 56px;
+        padding: 0 16px;
+    }
+}
+
+// 自定义disable
+.@{ant-prefix}-btn[disabled].@{ant-prefix}-btn-primary {
+    color: white;
+    background-color: @btn-disable-color;
+    border-color: @btn-disable-color;
+}
+
+.@{ant-prefix}-btn[disabled]:not(.@{ant-prefix}-btn-primary) {
+    background-color: white;
+    color: fade(@btn-disable-color, 100%);
+    &:not(.@{ant-prefix}-btn-link) {
+        border-color: fade(@btn-disable-color, 100%);
+    }
+}
+
+.@{ant-prefix}-btn-group {
+    .@{ant-prefix}-btn[disabled]:not(.@{ant-prefix}-btn-primary) {
+        background-color: white;
+        color: fade(@btn-disable-color, 100%);
+        border-color: fade(@btn-disable-color, 100%);
+    }
+}
+
+// loading
+.@{ant-prefix}-btn {
+    box-shadow: none;
+    &.@{ant-prefix}-btn-loading {
+        position: relative;
+        > :not(.@{ant-prefix}icon-loading) {
+            visibility: hidden;
+        }
+        > .@{ant-prefix}icon-loading {
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            margin-left: 0 !important;
+            + span {
+                // 没办法解决如果原先就有 icon 会抖动的问题
+                margin-left: 0;
+            }
+        }
+        &:not(.@{ant-prefix}-btn-circle):not(.@{ant-prefix}-btn-circle-outline):not(.@{ant-prefix}-btn-icon-only) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+}
+
+.@{ant-prefix}-btn-pro {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    color: fade(black, 65%);
+    &:hover {
+        color: @primary-color;
+    }
+    &:active {
+        color: @primary-7;
+    }
+    &.@{ant-prefix}-btn-pro-delete {
+        &:not([disabled]):hover {
+            color: @error-color;
+        }
+        &:not([disabled]):active {
+            color: color(~`colorPalette('@{error-color}', 7) `);
+        }
+    }
+}
+
+// 按钮是图标和文字组合，padding特殊处理
+.@{ant-prefix}-btn-pro-icon {
+    font-size: 14px;
+    &:not(.@{ant-prefix}-btn-lg):not(.@{ant-prefix}-btn-sm):not(.@{ant-prefix}-btn-circle):not(.@{ant-prefix}-btn-icon-only):not(.@{ant-prefix}-btn-pro) {
+        padding: 0 16px 0 12px;
+    }
+}
+
+.@{ant-prefix}-btn-pro-icon.@{ant-prefix}-btn-lg {
+    font-size: 16px;
+    &:not(.@{ant-prefix}-btn-icon-only):not(.@{ant-prefix}-btn-pro):not(.@{ant-prefix}-btn-circle) {
+        padding: 0 30px 0 22px;
+    }
+}
+
+.@{ant-prefix}-btn-primary {
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.@{ant-prefix}-btn-danger {
+    text-shadow: none;
+}

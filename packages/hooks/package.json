@@ -1,0 +1,26 @@
+{
+  "name": "@yhc/hooks",
+  "version": "0.1.2",
+  "description": "hooks库",
+  "main": "./lib/index.ts",
+  "module": "./es/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib",
+    "es",
+    "package.json",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf es lib dist && father-build"
+  },
+  "keywords": [],
+  "dependencies": {
+    "ahooks": "^2.10.14"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6 || ^17.0"
+  }
+}

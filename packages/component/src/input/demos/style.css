@@ -1,0 +1,8 @@
+#input-tooltip .numeric-input .ant-tooltip-inner {
+    min-width: 32px;
+    min-height: 37px;
+}
+
+#input-tooltip .numeric-input .numeric-input-title {
+    font-size: 14px;
+}

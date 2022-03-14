@@ -1,0 +1,43 @@
+{
+  "name": "@yhc/component",
+  "version": "0.1.4",
+  "description": "基础库",
+  "main": "./dist/index.ts",
+  "module": "./es/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rimraf es lib && father-build && gulp",
+    "build:base": "rimraf es lib dist && father-build"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@yhc/utils": "^0.1.2",
+    "@yhc/hooks": "^0.1.2",
+    "antd": "^4.17.2",
+    "autoprefixer": "^10.4.2",
+    "classnames": "^2.3.1",
+    "color-parse": "^1.4.2",
+    "less": "^4.1.2",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.6",
+    "@types/react-transition-group": "^4.4.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "less-plugin-npm-import": "^2.1.0",
+    "postcss": "^8.3.5",
+    "through2": "^4.0.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

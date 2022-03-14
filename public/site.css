@@ -1,0 +1,63 @@
+body .__dumi-default-layout[data-site-mode='true'] {
+  padding-top: 84px;
+}
+body .__dumi-default-layout[data-site-mode='true'],
+body .__dumi-default-layout-toc {
+  top: 84px;
+}
+body .__dumi-default-navbar {
+  height: 48px;
+  padding: 0 22px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+body .__dumi-default-menu-inner ul {
+  font-size: 14px;
+}
+body .__dumi-default-navbar nav > span {
+  height: 48px;
+  line-height: 48px;
+}
+body .__dumi-default-navbar-logo {
+  font-size: 18px;
+  height: 28px;
+  color: #ff8d30;
+  line-height: 28px;
+  padding-left: 44px !important;
+}
+body .__dumi-default-navbar-logo:hover {
+  color: #ff8d30;
+}
+body .__dumi-default-menu-inner ul li a,
+body .__dumi-default-menu-inner ul li > span {
+  line-height: 36px;
+}
+@media only screen and (min-width: 768px) {
+  body .__dumi-default-menu[data-mode='site'] {
+    top: 48px;
+    padding-top: 22px;
+  }
+  body .__dumi-default-menu[data-mode='site'] .__dumi-default-menu-list > li > a {
+    padding-left: 22px;
+  }
+  body .__dumi-default-menu[data-mode='site'] .__dumi-default-menu-list > li > a ~ ul {
+    margin-left: 22px;
+    margin-bottom: 8px;
+  }
+}
+.doc-desc {
+  font-size: 14px;
+}
+.doc-desc-title {
+  float: left;
+  font-size: 16px;
+  color: #000;
+}
+.doc-desc-content {
+  padding-top: 2px;
+  margin-left: 105px;
+  color: #464646;
+}
+.doc-desc-content p {
+  line-height: 20px;
+  margin-bottom: 6px;
+}

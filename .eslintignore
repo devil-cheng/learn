@@ -1,0 +1,13 @@
+# dependencies
+node_modules
+# production
+dist
+/.vscode
+lib
+es
+.umi
+.github
+.eslintrc.js
+scripts
+webpack.config.js
+gulpfile.js

@@ -1,0 +1,179 @@
+@import '../../styles/theme/default.less';
+
+@prefix-cls: ~'@{ant-prefix}-input-tips';
+@textArea-cls: ~'@{ant-prefix}-textarea-tips-num';
+
+.@{ant-prefix}-input-affix-wrapper .@{ant-prefix}-input-suffix,
+.@{ant-prefix}-input-affix-wrapper .@{ant-prefix}-input-suffix span,
+.@{textArea-cls} {
+    font-size: 12px;
+    color: #bfbfbf;
+}
+
+.@{textArea-cls} {
+    // &.@{ant-prefix}-input-affix-wrapper .@{ant-prefix}-input:not(:last-child) {
+    //     padding-right: 70px;
+    // }
+    .@{ant-prefix}-textarea-tips-highlight {
+        > span {
+            color: @primary-color;
+        }
+    }
+}
+
+.@{ant-prefix}-input-tips {
+    .@{ant-prefix}-input-tips-highlight {
+        > span {
+            color: @primary-color;
+        }
+    }
+}
+
+.@{ant-prefix}-textarea-warp {
+    position: relative;
+
+    .ant-input-textarea-clear-icon {
+        color: rgba(0, 0, 0, 0.45);
+    }
+
+    .@{textArea-cls} {
+        position: absolute;
+        left: 1px;
+        right: 18px;
+        bottom: 1px;
+        height: 20px;
+        line-height: 20px;
+        padding-left: 6px;
+        font-size: 12px;
+        text-align: right;
+        color: #bfbfbf;
+        border-radius: 4px;
+        background-color: #fff;
+        z-index: 10;
+    }
+
+    .@{ant-prefix}-textarea-input {
+        padding-bottom: 20px;
+        caret-color: @primary-color;
+
+        & + .@{ant-prefix}-input-textarea-clear-icon {
+            opacity: 0;
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.25);
+        }
+
+        &:focus {
+            & + .@{ant-prefix}-input-textarea-clear-icon {
+                opacity: 1;
+            }
+        }
+    }
+
+    .@{ant-prefix}-textarea-input.@{ant-prefix}-input-affix-wrapper-textarea-with-clear-btn {
+        padding-bottom: 0;
+
+        & + .@{textArea-cls} {
+            bottom: 2px;
+        }
+    }
+}
+
+form textarea.@{ant-prefix}-input {
+    margin-bottom: 0;
+}
+
+//设计规则
+//获取焦点时候的光标为主题色
+//输入框的input颜色为#262626
+//预设值placeholder:bfbfbf
+.@{ant-prefix}-input {
+    caret-color: @primary-color;
+    color: #262626;
+
+    &:focus {
+        box-shadow: 0 0 0 2px fade(@primary-color, 15%);
+    }
+
+    &::placeholder {
+        color: #bfbfbf;
+    }
+
+    & + .@{ant-prefix}-input-suffix {
+        .@{ant-prefix}-input-clear-icon {
+            opacity: 0;
+            color: rgba(0, 0, 0, 0.25);
+            font-size: 14px;
+        }
+    }
+
+    &:focus {
+        & + .@{ant-prefix}-input-suffix {
+            .@{ant-prefix}-input-clear-icon {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.@{ant-prefix}-input-group-addon {
+    background-color: #fff;
+}
+
+.@{ant-prefix}-input-search-button {
+    .anticon-search {
+        &:after {
+            content: '\e7a2';
+            font-family: 'iconfont' !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        svg {
+            display: none;
+        }
+    }
+}
+
+.anticon.@{ant-prefix}-input-search-icon {
+    &:after {
+        content: '\e7a2';
+        font-family: 'iconfont' !important;
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    svg {
+        display: none;
+    }
+}
+
+.@{ant-prefix}-input-affix-wrapper {
+    .@{ant-prefix}-input-suffix,
+    .@{ant-prefix}-input-prefix {
+        color: rgba(0, 0, 0, 0.45);
+    }
+
+    .@{ant-prefix}-input-password-icon:hover {
+        color: @primary-color;
+    }
+}
+
+.@{ant-prefix}-input-affix-wrapper-lg {
+    .@{ant-prefix}-input-suffix {
+        .@{ant-prefix}-input-clear-icon {
+            font-size: 16px;
+        }
+    }
+}
+
+.@{ant-prefix}-input-affix-wrapper-sm {
+    .@{ant-prefix}-input-suffix {
+        .@{ant-prefix}-input-clear-icon {
+            font-size: 12px;
+        }
+    }
+}

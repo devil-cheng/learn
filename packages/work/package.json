@@ -1,0 +1,32 @@
+{
+  "name": "@yhc/work",
+  "version": "0.1.4",
+  "description": "业务组件库",
+  "main": "./dist/index.ts",
+  "module": "./es/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "package.json",
+    "README.md"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "build": "rimraf es lib dist && father-build"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@yhc/component": "^0.1.4",
+    "@yhc/utils": "^0.1.2",
+    "@yhc/hooks": "^0.1.2",
+    "classnames": "^2.3.1",
+    "lodash-es": "^4.17.21",
+    "prop-types": "^15.8.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
